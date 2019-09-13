@@ -52,7 +52,7 @@
 					<td>" .$row['title']."</td>
 					<td>" .$row['author']."</td>
 					<td>
-						<img class='img-thumbnail img-fluid' src=" .$row['cover_image']." alt='some image'/>
+						<img class='img-thumbnail img-fluid img-size' src=" .$row['cover_image']." alt='some image'/>
 						</td>
 					<td>" .$row['short_description']."</td>
 					<td>" .$row['publish_date']."</td>
@@ -60,9 +60,9 @@
 					<td>" .$row['media_type']."</td>
 					<td>" .$row['media_status']."</td>
 				<td>
-					<a href='update.php?id=" .$row['media_lib_ID']."'><button type='button'>Edit</button></a>
-					<a href='delete.php?id=" .$row['media_lib_ID']."'><button type='button'>Delete</button></a>
-					<a href='show_media.php?id=" .$row['media_lib_ID']."'><button type='button'>Show Media</button></a>
+					<a href='update.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Edit</button></a>
+					<a href='delete.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Delete</button></a>
+					<a href='show_media.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Details</button></a>
 				</td>
 				</tr>" ;
 			}
