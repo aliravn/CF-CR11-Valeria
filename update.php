@@ -22,7 +22,7 @@ if ($_GET['id']) {
 <!DOCTYPE html>
 <html>
 <head>
-   <title><?php echo $data['title'];?></title>
+   <title>Edit/Update media</title>
    <style type= "text/css">
        fieldset {
            margin : auto;
@@ -39,35 +39,56 @@ if ($_GET['id']) {
 <body>
 
 	<fieldset>
+		<legend><?php echo $data['title'];?></legend>
+		<form action="a_update.php"  method="post">
+			<table  cellspacing="0" cellpadding= "0">
+				<tr>
+					<th>ISBN</th>
+					<td><input type= "text" name= "isbn_code" value= "<?php echo $data['isbn_code']?>" /></td>
+				</tr>
+				<tr>
+					<th>Title</th>
+					<td><input type="text"  name="title" value="<?php echo $data['title'] ?>" /></td>
+				</tr>
 
-	   <legend>Summary of your booking</legend>
-
-	   <form action="a_update.php"  method="post">
-	       <table  cellspacing="0" cellpadding= "0">
-	           <tr>
-	               <th>CarRegNo</th>
-	               <td><input type= "text" name= "registration_num" value= "<?php echo $data['registration_num']?>" readonly /></td>
-	           </tr>	       	
-	           <tr>
-	               <th>DailyRate</th>
-	               <td><input type="text"  name="daily_rate" value="<?php echo $data['daily_rate'] ?>" readonly /></td>
-	           </tr>    
-
-	           <tr>
-	               <th>CarModel</th>
-	               <td><input type ="text" name= "model_name" value= "<?php echo $data['model_name'] ?>" readonly /></td >
-	           </tr>
-	           <tr>
-	               <td><button  type= "submit">Book</button></td>
-	               <td><a  href= "index.php"><button type="button" >Back</button ></a></td>
-	           </tr>
-	       </table>
-	   </form>
-
+				<tr>
+					<th>Author</th>
+					<td><input type ="text" name= "author" value= "<?php echo $data['author'] ?>" /></td>
+				</tr>
+				<tr>
+					<th>Cover Image Link</th>
+					<td><input type ="text" name= "cover_image" value= "<?php echo $data['cover_image'] ?>" /></td>
+				</tr>				
+				<tr>
+					<th>Description</th>
+					<td><input type ="text" name= "short_description" value= "<?php echo $data['short_description'] ?>" /></td>
+				</tr>
+				<tr>
+					<th>Date Published</th>
+					<td><input type ="text" name= "publish_date" value= "<?php echo $data['publish_date'] ?>" /></td>
+				</tr>
+				<tr>
+					<th>Publisher</th>
+					<td><input type ="text" name= "name" value= "<?php echo $data['name'] ?>" readonly /></td>
+				</tr>
+				<tr>
+					<th>Media Type</th>
+					<td><input type ="text" name= "media_type" value= "<?php echo $data['media_type'] ?>" /></td>
+				</tr>
+				<tr>
+					<th>Availability</th>
+					<td><input type ="text" name= "media_status" value= "<?php echo $data['media_status'] ?>" /></td>
+				</tr>				
+				<tr>
+					<td><button  type= "submit">Update</button></td>
+					<td><a  href= "home.php"><button type="button">Back</button ></a></td>
+				</tr>
+			</table>
+		</form>
 	</fieldset>
 
-</body >
-</html >
+</body>
+</html>
 
 <?php
 }
