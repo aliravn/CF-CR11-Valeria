@@ -110,7 +110,7 @@ $connect->close();
 					</td>
 				</tr>				
 				<tr>
-					<td><button  type= "submit">Save changes</button></td>
+					<td><button  type= "submit">Add to Library</button></td>
 					<td><a  href= "home.php"><button type="button">Back</button></a></td>
 				</tr>
 			</table>
