@@ -3,7 +3,7 @@
 
 	if ($_GET['id']) {
 		$id = $_GET['id'];
-		$sql_request = "SELECT media_lib_ID, isbn_code, title, cover_image, short_description, publish_date, media_type, media_status FROM media JOIN authors ON authors.author_ID = media.fk_author JOIN publishers ON publishers.publisher_ID = media.fk_publisher WHERE media_lib_ID = '$id'";
+		$sql_request = "SELECT * FROM media WHERE media_lib_ID = '$id'";
 		$result = $connect->query($sql_request); 
 		$data = $result->fetch_assoc(); 
 
@@ -25,7 +25,6 @@
 				$publisher_list[$row['publisher_ID']] = $row['name'];
 			}	
 		}
-		var_dump($publisher_list);
 		
 		$connect->close(); 
 ?>
@@ -55,7 +54,11 @@
 					<td>
 						<select>
 						<?php foreach($author_list as $author_ID=>$author_name) {
-							echo "<option value=$author_ID>$author_name</option>";
+							if($data['fk_author']==$author_ID) {
+								echo "<option value=$author_ID selected>$author_name (current value)</option>";
+							} else {
+								echo "<option value=$author_ID>$author_name</option>";
+							}
 						}
 						?>
 						</select>
@@ -79,7 +82,11 @@
 					<td>
 						<select>
 						<?php foreach($publisher_list as $publisher_ID=>$publisher_name) {
-							echo "<option value=$publisher_ID>$publisher_name</option>";
+							if ($data['fk_publisher']==$publisher_ID) {
+								echo "<option value=$publisher_ID selected>$publisher_name (current value)</option>";
+							} else {
+								echo "<option value=$publisher_ID>$publisher_name</option>";
+							}	
 						}
 						?>
 						</select>
