@@ -7,10 +7,10 @@ define('DBUSER' , 'root');
 define('DBPASS', 'Deadend6!');
 define ('DBNAME', 'cr11_valeria_nazarova_biglibrary');
 
-$conn = mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME);
+$connect = mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME);
 
-if (!$conn) {
+if (!$connect) {
  die("Connection failed : ". mysqli_error());
 }
-else {echo "connected";}
+// else {echo "connected";}
 ?>
