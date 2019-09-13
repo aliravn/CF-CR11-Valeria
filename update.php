@@ -3,8 +3,7 @@
 
 	if ($_GET['id']) {
 		$id = $_GET['id'];
-		$sql_request = "SELECT media_lib_ID, isbn_code, title, concat(first_name, ' ', last_name) as author, cover_image, short_description, publish_date, name, media_type, media_status FROM media JOIN authors ON authors.author_ID = media.fk_author JOIN publishers ON publishers.publisher_ID = media.fk_publisher WHERE media_lib_ID = '$id'";
-		// var_dump($sql_request);
+		$sql_request = "SELECT media_lib_ID, isbn_code, title, cover_image, short_description, publish_date, media_type, media_status FROM media JOIN authors ON authors.author_ID = media.fk_author JOIN publishers ON publishers.publisher_ID = media.fk_publisher WHERE media_lib_ID = '$id'";
 		$result = $connect->query($sql_request); 
 		$data = $result->fetch_assoc(); 
 
@@ -16,36 +15,28 @@
 			while($row = $result->fetch_assoc()) {
 				$author_list[$row['author_ID']] = $row['first_name'].' '.$row['last_name'];
 			}
-	}
-// var_dump($author_list);
+		}	
 
-
-
-
-
-$connect->close(); 
-
+		$sql_publisher = "SELECT * FROM publishers";
+		$result = $connect->query($sql_publisher); 
+		$publisher_list = [];
+		if($result->num_rows > 0) {
+			while($row = $result->fetch_assoc()) {
+				$publisher_list[$row['publisher_ID']] = $row['name'];
+			}	
+		}
+		var_dump($publisher_list);
+		
+		$connect->close(); 
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
    <title>Edit/Update media</title>
-   <style type= "text/css">
-       fieldset {
-           margin : auto;
-           margin-top: 100px;
-           width: 50%;
-       }
-
-       table tr th {
-           padding-top: 20px;
-       }
-   </style>
-
 </head>
-<body>
 
+<body>
 	<fieldset>
 		<legend><?php echo $data['title'];?></legend>
 		<form action="a_update.php"  method="post">
@@ -85,7 +76,14 @@ $connect->close();
 				</tr>
 				<tr>
 					<th>Publisher</th>
-					<td><input type ="text" name= "name" value= "<?php echo $data['name'] ?>" readonly /></td>
+					<td>
+						<select>
+						<?php foreach($publisher_list as $publisher_ID=>$publisher_name) {
+							echo "<option value=$publisher_ID>$publisher_name</option>";
+						}
+						?>
+						</select>
+					</td>
 				</tr>
 				<tr>
 					<th>Media Type</th>
