@@ -3,6 +3,7 @@
 	// session_start();
 	require_once 'db_connect.php';
 
+	// var_dump($data);
 	// if( !isset($_SESSION[ 'user' ]) ) {
 	// 	header("Location: index.php");
 	// 	exit;
@@ -22,6 +23,7 @@
 
 <body>
 
+<div class="page-wrapper">
 <a href="create.php"><button type="button">Add new media</button></a>
 
 <table  border="1" cellspacing= "0" cellpadding="0" class="table">
@@ -41,7 +43,7 @@
 	</thead>
 	<tbody>
 		<?php
-		$sql_request = "SELECT media_lib_ID, isbn_code, title, concat(first_name, ' ', last_name) as author, cover_image, short_description, publish_date, name, media_type, media_status FROM media JOIN authors ON authors.author_ID = media.fk_author JOIN publishers ON publishers.publisher_ID = media.fk_publisher";
+		$sql_request = "SELECT media_lib_ID, isbn_code, title, concat(first_name, ' ', last_name) as author, cover_image, short_description, publish_date, media_type, media_status, name, publisher_ID FROM media JOIN authors ON authors.author_ID = media.fk_author JOIN publishers ON publishers.publisher_ID = media.fk_publisher";
 		$result = $connect->query($sql_request); 
 
 		if($result->num_rows > 0) {
@@ -51,12 +53,10 @@
 					<td>" .$row['isbn_code']."</td>
 					<td>" .$row['title']."</td>
 					<td>" .$row['author']."</td>
-					<td>
-						<img class='img-thumbnail img-fluid img-size' src=" .$row['cover_image']." alt='some image'/>
-						</td>
+					<td><img class='img-thumbnail img-fluid img-size' src=" .$row['cover_image']." alt='some image'/></td>
 					<td>" .$row['short_description']."</td>
 					<td>" .$row['publish_date']."</td>
-					<td>" .$row['name']."</td>
+					<td><a href='publisher.php?id=".$row['publisher_ID']."'/>".$row['name']."</a></td>
 					<td>" .$row['media_type']."</td>
 					<td>" .$row['media_status']."</td>
 				<td>
@@ -74,7 +74,7 @@
 </table>
 
 
-
+</div>
 </body>
 </html>
 
