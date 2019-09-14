@@ -37,9 +37,8 @@ $connect->close();
 
 <body>
 	<div class="create-page">
-	<h3>Add Media</h3>
-	<form action="a_create.php"  method="post">
-		<table  cellspacing="0" cellpadding= "0">
+		<h3>Add Media</h3>
+		<form action="a_create.php"  method="post">
 			<div class="form-group">
 				<span>ISBN</span>
 				<input class="form-control" type= "text" name= "isbn_code" placeholder="ISBN"/>
@@ -106,7 +105,7 @@ $connect->close();
 				<a href= "index.php"><button class="back-button" type="button">Back</button></a>
 				<button type= "submit">Add to Library</button>
 			</div>
-	</form>
+		</form>
 	</div>
 </body>
 </html>
