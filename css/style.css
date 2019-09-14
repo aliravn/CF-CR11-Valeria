@@ -1,5 +1,7 @@
 body {
 	margin: 0 auto;
+	width: 95%;
+	background-color: lightgrey;
 }
 
 .page-wrapper {
@@ -12,6 +14,7 @@ table {
 	width: 100%;
 	margin-top: 20px;
 	font-size: 0.7rem; /* can be changed, font-color not possible to change */
+	background-color: white;
 }	
 
 .img-size {
@@ -88,4 +91,13 @@ table {
 
 .delete-page-button-container {
 	margin-top: 2rem;
+}
+
+header {
+	width: 100%;
+	margin-bottom: 2rem;
+}
+header > img {
+	width: 100%;
+	object-fit: cover;
 }
