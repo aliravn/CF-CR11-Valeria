@@ -166,3 +166,39 @@ header > img {
 	box-shadow: 5px 5px 5px grey;
 	cursor: pointer;
 }
+
+.create-page {
+	width: 35rem;
+	margin: 0 auto;
+	margin-top: 1rem;
+	font-size: 1.2rem;
+	padding: 1rem;
+	border-radius: 20px;
+	border: .5rem solid #2ec95a;
+	box-shadow: 5px 5px 5px grey, -5px -5px 5px grey;
+}
+
+.create-page > h3 {
+	color: #000000;
+	font-weight: bold;
+	text-align: center;
+}
+
+.create-button-container {
+	text-align: right;
+}
+
+.create-page button {
+	width: 10rem;
+	height: 2rem;
+	border-radius: 5px;
+	margin: 1.5rem 1rem 0 0;
+	font-size: 1rem;
+	border: 1px solid black;
+	box-shadow: 5px 5px 5px grey;
+	cursor: pointer;
+}
+
+.create-page .back-button {
+		width: 5rem;
+}

@@ -20,7 +20,7 @@
 	<img src="library1.jpg" alt="">
 </header>
 
-<a href="p_create.php"><button class="btn btn-primary" type="button">Add new media</button></a>
+<a href="p_create.php"><button class="btn btn-success" type="button">Add new media</button></a>
 
 <table  border="1" cellspacing= "0" cellpadding="0" class="table">
 	<thead>
