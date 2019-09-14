@@ -21,3 +21,33 @@ table {
 .home-manipulate-button {
 	width: 60px;
 }
+
+.confirmation-message {
+	width: 30rem;
+	height: 100px;
+	margin: 0 auto;
+	margin-top: 10vw;
+	font-size: 1.2rem;
+	text-align: center;
+	padding: 2rem 1rem;
+	background-color: lightgreen;
+	border-radius: 15px 150px 15px 150px;
+	box-shadow: 10px 5px 5px green, -5px -5px 5px grey;
+}
+
+.confirmation-message button {
+	border-radius: 10px;
+	border: 1px solid black;
+	padding: .4rem 1rem;
+	margin: 0 1rem;
+	font-size: 1.5rem;
+	border-radius: 15px 150px 15px 150px;
+	box-shadow: 5px 5px 5px grey;
+	cursor: pointer;
+}
+
+.delete {
+	background-color: #f54251;
+	box-shadow: 10px 5px 5px red, -5px -5px 5px grey;
+	color: white;s
+}

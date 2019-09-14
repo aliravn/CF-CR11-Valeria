@@ -14,10 +14,24 @@ if ($_POST) {
 	$media_status = $_POST['media_status'];
 
 	$sql_request = "UPDATE media SET `isbn_code` = '$media_isbn', `title` = '$media_title', `fk_author` = '$media_author', `cover_image` = '$media_image', `short_description` = '$media_description', `publish_date` = '$media_publishdate', `fk_publisher` = '$media_publisher', `media_type` = '$media_type', `media_status` = '$media_status' WHERE media_lib_ID = '$id'" ;
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Confirmation</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<?php
 	if($connect->query($sql_request) === TRUE) {
-		echo "<p>Record successfully updated</p>";
-		echo "<a href='./update.php?id=$id'><button type='button'>Back</button></a>";
-		echo "<a href='./index.php'><button type='button'>Home</button></a>";
+		echo "
+		<div class='confirmation-message'>
+			<p>Record successfully updated</p>
+			<a href='./update.php?id=$id'><button type='button'>Back</button></a>
+			<a href='./index.php'><button type='button'>Home</button></a>
+		</div>		
+		";
 	} else {
 		echo "Error while updating record : ". $connect->error;
 	}
