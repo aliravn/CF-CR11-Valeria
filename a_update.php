@@ -28,7 +28,7 @@ if ($_POST) {
 		echo "
 		<div class='confirmation-message'>
 			<p>Record successfully updated</p>
-			<a href='./update.php?id=$id'><button type='button'>Back</button></a>
+			<a href='./p_update.php?id=$id'><button type='button'>Back</button></a>
 			<a href='./index.php'><button type='button'>Home</button></a>
 		</div>
 		";

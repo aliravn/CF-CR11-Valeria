@@ -31,8 +31,8 @@ if ($_GET['id']) {
 		<p>Description: <?php echo $data['short_description'] ?></p>
 		<p>Availability: <?php echo $data['media_status'] ?></p>
 		<button>Reserve</button>
-		<a href="update.php?id=<?php echo $data['media_lib_ID'] ?>"><button class='home-manipulate-button' type='button'>Edit</button></a>
-		<a href="delete.php?id=<?php echo $data['media_lib_ID'] ?>"><button class='home-manipulate-button' type='button'>Delete</button></a>
+		<a href="p_update.php?id=<?php echo $data['media_lib_ID'] ?>"><button class='home-manipulate-button' type='button'>Edit</button></a>
+		<a href="p_delete.php?id=<?php echo $data['media_lib_ID'] ?>"><button class='home-manipulate-button' type='button'>Delete</button></a>
 		<a href="index.php"><button type="button">Back</button></a>		
 	</fieldset>
 

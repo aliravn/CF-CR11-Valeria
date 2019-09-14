@@ -14,7 +14,7 @@
 <body>
 
 <div class="page-wrapper">
-<a href="create.php"><button class="btn btn-primary" type="button">Add new media</button></a>
+<a href="p_create.php"><button class="btn btn-primary" type="button">Add new media</button></a>
 
 <table  border="1" cellspacing= "0" cellpadding="0" class="table">
 	<thead>
@@ -50,9 +50,9 @@
 					<td>" .$row['media_type']."</td>
 					<td>" .$row['media_status']."</td>
 				<td>
-					<a href='update.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Edit</button></a>
-					<a href='delete.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Delete</button></a>
-					<a href='show_media.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Details</button></a>
+					<a href='p_update.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Edit</button></a>
+					<a href='p_delete.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Delete</button></a>
+					<a href='p_show_media.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Details</button></a>
 				</td>
 				</tr>" ;
 			}
