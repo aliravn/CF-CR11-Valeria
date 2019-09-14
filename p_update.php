@@ -37,91 +37,92 @@ if ($_GET['id']) {
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Edit/Update media</title>
+	<title>Edit/Update media</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">   
 </head>
 
+
 <body>
-	<fieldset>
-		<legend><?php echo $data['title'];?></legend>
+	<div class="update-page">
+		<h3><?php echo $data['title'];?></h3>
 		<form action="a_update.php"  method="post">
-			<table  cellspacing="0" cellpadding= "0">
-				<tr>
-					<td><input type ="hidden" name= "media_lib_ID" value= "<?php echo $data['media_lib_ID'] ?>" /></td>
-				</tr>
-				<tr>
-					<th>ISBN</th>
-					<td><input type= "text" name= "isbn_code" value= "<?php echo $data['isbn_code']?>" /></td>
-				</tr>
-				<tr>
-					<th>Title</th>
-					<td><input type="text"  name="title" value="<?php echo $data['title'] ?>" /></td>
-				</tr>
+			<input type ="hidden" name= "media_lib_ID" value= "<?php echo $data['media_lib_ID'] ?>" />
+			<div class="form-group">
+				<span>ISBN</span>
+				<input class="form-control" type= "text" name= "isbn_code" value= "<?php echo $data['isbn_code']?>" />
+			</div>
+			<div class="form-group">
+				<span>Title</span>
+				<input class="form-control" type="text"  name="title" value="<?php echo $data['title'] ?>" />
+			</div>
 
-				<tr>
-					<th>Author</th>
-					<td>
-						<select name="fk_author">
-						<?php foreach($author_list as $author_ID=>$author_name) {
-							if($data['fk_author']==$author_ID) {
-								echo "<option value=$author_ID selected>$author_name (current value)</option>";
-							} else {
-								echo "<option value=$author_ID>$author_name</option>";
-							}
+			<div class="form-group">
+			<span>Author</span>
+				<select class="form-control" name="fk_author">
+					<?php foreach($author_list as $author_ID=>$author_name) {
+					if($data['fk_author']==$author_ID) {
+						echo "<option value=$author_ID selected>$author_name (current value)</option>";
+						} else {
+						echo "<option value=$author_ID>$author_name</option>";
 						}
-						?>
-						</select>
-					</td>
-				</tr>
+					}
+					?>
+				</select>
+			</div>
+			<div class="form-group">
+				<span>Cover Image Link</span>
+				<input class="form-control" type="url" name="cover_image" value= "<?php echo $data['cover_image'] ?>" />
+			</div>
+			<div class="form-group">
+				<span>Description</span>
+				<input class="form-control" type ="text" name= "short_description" value= "<?php echo $data['short_description'] ?>" />
+			</div>
+			<div class="form-group">
+				<span>Date Published</span>
+				<input class="form-control" type ="text" name= "publish_date" value= "<?php echo $data['publish_date'] ?>" />
+			</div>
+			<div class="form-group">
+				<span>Publisher</span>
+				<select class="form-control" name="fk_publisher">
+					<?php foreach($publisher_list as $publisher_ID=>$publisher_name) {
+						if ($data['fk_publisher']==$publisher_ID) {
+							echo "<option value=$publisher_ID selected>$publisher_name (current value)</option>";
+						} else {
+							echo "<option value=$publisher_ID>$publisher_name</option>";
+						}	
+					}
+					?>
+				</select>				
+			</div>
+			<div class="form-group">
+				<span>Media Type</span>
+				<select class="form-control" name= "media_type">
+					<option value="book">BOOK</option>
+					<option value="cd">CD</option>
+					<option value="dvd">DVD</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<span>Availability (available/reserved)</span>
+				<select class="form-control" name="media_status">
+					<?php 
+					echo "<option value=".$data['media_status']." selected>".$data['media_status']." (current value)</option>";
+					if ($data['media_status']=='available') {
+						echo "<option value='reserved'>reserved</option>";
+					} else {
+						echo "<option value='available'>available</option>";	
+					}
+					?>
+				</select>
+			</div>
 
-				<tr>
-					<th>Cover Image Link</th>
-					<td><input type="url" name="cover_image" value= "<?php echo $data['cover_image'] ?>" /></td>
-				</tr>				
-				<tr>
-					<th>Description</th>
-					<td><input type ="text" name= "short_description" value= "<?php echo $data['short_description'] ?>" /></td>
-				</tr>
-				<tr>
-					<th>Date Published</th>
-					<td><input type ="text" name= "publish_date" value= "<?php echo $data['publish_date'] ?>" /></td>
-				</tr>
-				<tr>
-					<th>Publisher</th>
-					<td>
-						<select name="fk_publisher">
-						<?php foreach($publisher_list as $publisher_ID=>$publisher_name) {
-							if ($data['fk_publisher']==$publisher_ID) {
-								echo "<option value=$publisher_ID selected>$publisher_name (current value)</option>";
-							} else {
-								echo "<option value=$publisher_ID>$publisher_name</option>";
-							}	
-						}
-						?>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th>Media Type</th>
-					<td>
-						<select name= "media_type">
-							<option value="book">BOOK</option>
-							<option value="cd">CD</option>
-							<option value="dvd">DVD</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th>Availability (available/reserved)</th>
-					<td><input type ="text" name= "media_status" value= "<?php echo $data['media_status'] ?>" /></td>
-				</tr>				
-				<tr>
-					<td><button  type= "submit">Save changes</button></td>
-					<td><a  href= "index.php"><button type="button">Back</button></a></td>
-				</tr>
-			</table>
+			<div class="update-button-container">
+				<a href= "index.php"><button class = "back-button" type="button">Back</button></a>		
+				<button  type= "submit">Save changes</button>
+			</div>
 		</form>
-	</fieldset>
-
+	</div>	
 </body>
 </html>
 
