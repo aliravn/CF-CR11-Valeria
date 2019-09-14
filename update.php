@@ -116,7 +116,7 @@ if ($_GET['id']) {
 				</tr>				
 				<tr>
 					<td><button  type= "submit">Save changes</button></td>
-					<td><a  href= "home.php"><button type="button">Back</button></a></td>
+					<td><a  href= "index.php"><button type="button">Back</button></a></td>
 				</tr>
 			</table>
 		</form>

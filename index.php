@@ -1,22 +1,12 @@
 <?php
 	ob_start();
-	// session_start();
 	require_once 'db_connect.php';
-
-	// var_dump($data);
-	// if( !isset($_SESSION[ 'user' ]) ) {
-	// 	header("Location: index.php");
-	// 	exit;
-	// }
-
-	// $res=mysqli_query($conn, "SELECT * FROM customer WHERE customer_id=".$_SESSION['user']);
-	// $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Intergalactic Library</title>
+	<title>Intergalactic Library - Home</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -24,7 +14,7 @@
 <body>
 
 <div class="page-wrapper">
-<a href="create.php"><button type="button">Add new media</button></a>
+<a href="create.php"><button class="btn btn-primary" type="button">Add new media</button></a>
 
 <table  border="1" cellspacing= "0" cellpadding="0" class="table">
 	<thead>

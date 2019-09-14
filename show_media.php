@@ -33,7 +33,7 @@ if ($_GET['id']) {
 		<button>Reserve</button>
 		<a href="update.php?id=<?php echo $data['media_lib_ID'] ?>"><button class='home-manipulate-button' type='button'>Edit</button></a>
 		<a href="delete.php?id=<?php echo $data['media_lib_ID'] ?>"><button class='home-manipulate-button' type='button'>Delete</button></a>
-		<a href="home.php"><button type="button">Back</button></a>		
+		<a href="index.php"><button type="button">Back</button></a>		
 	</fieldset>
 
 </body>

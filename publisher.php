@@ -31,7 +31,7 @@ if ($_GET['id']) {
 			echo  "<tr><td colspan='5'><center>No Data Avaliable</center></td></tr>";
 		}
 		?>
-		<a  href= "home.php"><button type="button">Back</button></a>
+		<a  href= "index.php"><button type="button">Back</button></a>
 	</fieldset>
 
 </body>

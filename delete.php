@@ -34,7 +34,7 @@ if ($_GET['id']) {
 					<td><?php echo $data['author'] ?></td>
 				</tr>
 					<td><a href="a_delete.php?id=<?php echo $data['media_lib_ID']?>" /><button class='home-manipulate-button' type='button'>Yes, get rid of it!</button></a></td>
-					<td><a href= "home.php"><button type="button">No, it was a mistake!</button></a></td>
+					<td><a href= "index.php"><button type="button">No, it was a mistake!</button></a></td>
 
 				</tr>
 			</table>
