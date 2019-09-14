@@ -30,7 +30,7 @@ if ($_POST) {
 			<p>Record successfully updated</p>
 			<a href='./update.php?id=$id'><button type='button'>Back</button></a>
 			<a href='./index.php'><button type='button'>Home</button></a>
-		</div>		
+		</div>
 		";
 	} else {
 		echo "Error while updating record : ". $connect->error;
