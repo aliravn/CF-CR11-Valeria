@@ -98,13 +98,30 @@ if ($_GET['id']) {
 			<div class="form-group">
 				<span>Media Type</span>
 				<select class="form-control" name= "media_type">
-					<option value="book">BOOK</option>
-					<option value="cd">CD</option>
-					<option value="dvd">DVD</option>
+					<?php 
+					echo "<option value=".$data['media_type']." selected>".$data['media_type']." (current value)</option>";
+					var_dump($data['media_type']);
+					if ($data['media_type']=="book") {
+						echo "
+						<option value='DVD'>DVD</option>
+						<option value='CD'>CD</option>
+						";
+					} else if ($data['media_type']=='cd') {
+						echo "
+						<option value='BOOK'>BOOK</option>
+						<option value='DVD'>DVD</option>
+						";
+					} else {
+						echo "
+						<option value='BOOK'>BOOK</option>
+						<option value='CD'>CD</option>
+						";	
+					}
+					?>					
 				</select>
 			</div>
 			<div class="form-group">
-				<span>Availability (available/reserved)</span>
+				<span>Availability</span>
 				<select class="form-control" name="media_status">
 					<?php 
 					echo "<option value=".$data['media_status']." selected>".$data['media_status']." (current value)</option>";
