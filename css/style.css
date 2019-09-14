@@ -51,3 +51,41 @@ table {
 	box-shadow: 10px 5px 5px red, -5px -5px 5px grey;
 	color: white;s
 }
+
+.delete-page {
+	width: 30rem;
+	height: 10rem;
+	margin: 0 auto;
+	margin-top: 10vw;
+	font-size: 1.2rem;
+	text-align: center;
+	padding: 2rem 1rem 2.5rem;
+/* 	background-color: #f78b8e; */
+	border-radius: 20px;
+	border: .5rem solid #f78b8e;
+	box-shadow: 5px 5px 5px grey, -5px -5px 5px grey;
+}
+
+.delete-page p {
+	margin: 0;
+}
+
+.delete-page button {
+	width: 13rem;
+	height: 3rem;
+	border-radius: 10px;
+	margin: 0 .5rem;
+	font-size: 1rem;
+	border: 1px solid black;
+	box-shadow: 5px 5px 5px grey;
+	cursor: pointer;
+}
+
+.delete-page .delete-remark-text {
+	font-size: .8rem;
+	margin-bottom: 1rem;
+}
+
+.delete-page-button-container {
+	margin-top: 2rem;
+}

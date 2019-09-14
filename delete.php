@@ -19,27 +19,20 @@ if ($_GET['id']) {
 <html>
 <head>
    <title>Delete media</title>
+   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-	<fieldset>
-		<legend>Do you really want to delete this media item?</legend>
-			<table  cellspacing="0" cellpadding= "0">		
-				<tr>
-					<th>Title</th>
-					<td><?php echo $data['title'] ?></td>
-				</tr>
-				<tr>
-					<th>Author</th>
-					<td><?php echo $data['author'] ?></td>
-				</tr>
-					<td><a href="a_delete.php?id=<?php echo $data['media_lib_ID']?>" /><button class='home-manipulate-button' type='button'>Yes, get rid of it!</button></a></td>
-					<td><a href= "index.php"><button type="button">No, it was a mistake!</button></a></td>
-
-				</tr>
-			</table>
-	</fieldset>
-
+	<div class="delete-page">
+		<p>Do you really want to delete this media item?</p>
+		<p class="delete-remark-text">Think twice - you will not be able to reverse this action.</p>
+		<p><strong>Title:</strong> <?php echo $data['title'] ?></p>
+		<p><strong>Author:</strong> <?php echo $data['author'] ?><p/>
+		<div class="delete-page-button-container">
+			<a href="a_delete.php?id=<?php echo $data['media_lib_ID']?>" /><button type='button'>Yes, get rid of it!</button></a>
+			<a href= "index.php"><button type="button">No, it was a mistake!</button></a>
+		</div>
+	</div>
 </body>
 </html>
 
