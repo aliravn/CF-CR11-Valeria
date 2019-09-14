@@ -8,7 +8,7 @@ require_once 'db_connect.php';
 
 if ($_GET['id']) {
 	$id = $_GET['id'];
-	$sql_request = "SELECT media.title FROM media WHERE fk_publisher = '$id'";
+	$sql_request = "SELECT media.isbn_code, media.title, concat(first_name, ' ', last_name) as author FROM media JOIN authors ON authors.author_ID = media.fk_author WHERE fk_publisher = '$id'";
 	$result = $connect->query($sql_request); 
 
 	$sql_publisher = "SELECT publishers.name FROM publishers WHERE publisher_ID = '$id'";
@@ -26,21 +26,24 @@ if ($_GET['id']) {
 </head>
 
 <body>
-	<h3>List of Media buplished by <span><?php echo $publisher_name['name'] ?></span></h3>
-	<?php 
-	$count = 1;
-	if($result->num_rows > 0) {
-		while($row = $result->fetch_assoc()) {
-			echo  
-			"<div>$count. " .$row['title']."</div>" ;
-			$count++;
+	<div class="publisher-page">
+		<h3>List of Media published by <span><?php echo $publisher_name['name'] ?></span></h3>
+		<?php 
+		$count = 1;
+		if($result->num_rows > 0) {
+			while($row = $result->fetch_assoc()) {
+				echo  
+				"<div>$count. <strong>" .$row['title']."</strong> by ".$row['author']."</div>" ;
+				$count++;
+			}
+		} else {
+			echo  "<tr><td colspan='5'><center>No Data Avaliable</center></td></tr>";
 		}
-	} else {
-		echo  "<tr><td colspan='5'><center>No Data Avaliable</center></td></tr>";
-	}
-	?>
-	<a class="publisher-page-button" href= "index.php"><button type="button">Back</button></a>
-
+		?>
+		<div class="publisher-button-container">
+			<a class="publisher-page-button" href= "index.php"><button type="button">Back</button></a>
+		</div>
+	</div>
 
 </body>
 </html>
