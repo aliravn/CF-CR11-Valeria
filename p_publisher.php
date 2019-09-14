@@ -14,7 +14,6 @@ if ($_GET['id']) {
 	$sql_publisher = "SELECT publishers.name FROM publishers WHERE publisher_ID = '$id'";
 	$result_publisher = $connect->query($sql_publisher); 
 	$publisher_name = $result_publisher->fetch_assoc();
-	var_dump($publisher_name);
 
 	$connect->close(); 
 ?>
@@ -27,18 +26,20 @@ if ($_GET['id']) {
 </head>
 
 <body>
-	<h3>List of Media buplished by <?php echo $publisher_name['name'] ?></h3>
+	<h3>List of Media buplished by <span><?php echo $publisher_name['name'] ?></span></h3>
 	<?php 
+	$count = 1;
 	if($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
 			echo  
-			"<div>" .$row['title']."</div>" ;
+			"<div>$count. " .$row['title']."</div>" ;
+			$count++;
 		}
 	} else {
 		echo  "<tr><td colspan='5'><center>No Data Avaliable</center></td></tr>";
 	}
 	?>
-	<a  href= "index.php"><button type="button">Back</button></a>
+	<a class="publisher-page-button" href= "index.php"><button type="button">Back</button></a>
 
 
 </body>

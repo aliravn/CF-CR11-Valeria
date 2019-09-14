@@ -129,3 +129,7 @@ header > img {
 .publisher-page-button > button {
 	margin-top: 2rem;
 }
+
+h3 > span {
+	color: blue;
+}

@@ -39,7 +39,7 @@
 	</thead>
 	<tbody>
 		<?php
-		$sql_request = "SELECT media_lib_ID, isbn_code, title, concat(first_name, ' ', last_name) as author, cover_image, short_description, publish_date, media_type, media_status, name, publisher_ID FROM media JOIN authors ON authors.author_ID = media.fk_author JOIN publishers ON publishers.publisher_ID = media.fk_publisher";
+		$sql_request = "SELECT media_lib_ID, isbn_code, title, concat(first_name, ' ', last_name) as author, cover_image, short_description, publish_date, media_type, media_status, name, publisher_ID FROM media JOIN authors ON authors.author_ID = media.fk_author JOIN publishers ON publishers.publisher_ID = media.fk_publisher ORDER BY title";
 		$result = $connect->query($sql_request); 
 
 		if($result->num_rows > 0) {
