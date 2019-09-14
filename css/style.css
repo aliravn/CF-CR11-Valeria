@@ -21,8 +21,32 @@ table {
 	width: 100px;
 }
 
+.home-manupulate-link{
+	margin: 1rem 0;
+}
+
 .home-manipulate-button {
 	width: 60px;
+}
+
+.manipulate-button-container {
+	width: 70px;
+}
+
+.publish-date-container {
+	width: 90px;
+	text-align: center;
+}
+
+.status-container {
+	text-align: center;
+}
+
+.cover-container {
+	width: 50px;
+}
+.cover-container > img {
+	margin-top: .5rem;
 }
 
 .confirmation-message {
@@ -101,3 +125,4 @@ header > img {
 	width: 100%;
 	object-fit: cover;
 }
+

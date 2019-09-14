@@ -49,16 +49,16 @@
 					<td>" .$row['isbn_code']."</td>
 					<td>" .$row['title']."</td>
 					<td>" .$row['author']."</td>
-					<td><img class='img-thumbnail img-fluid img-size' src=" .$row['cover_image']." alt='some image'/></td>
+					<td class='cover-container'><img class='img-thumbnail img-fluid img-size' src=" .$row['cover_image']." alt='some image'/></td>
 					<td>" .$row['short_description']."</td>
-					<td>" .$row['publish_date']."</td>
-					<td><a href='publisher.php?id=".$row['publisher_ID']."'/>".$row['name']."</a></td>
+					<td class='publish-date-container'>" .$row['publish_date']."</td>
+					<td><a href='p_publisher.php?id=".$row['publisher_ID']."'/>".$row['name']."</a></td>
 					<td>" .$row['media_type']."</td>
-					<td>" .$row['media_status']."</td>
-				<td>
-					<a href='p_update.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Edit</button></a>
-					<a href='p_delete.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Delete</button></a>
-					<a href='p_show_media.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Details</button></a>
+					<td class='status-container'>" .$row['media_status']."</td>
+				<td class='manipulate-button-container'>
+					<a class='' href='p_update.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Edit</button></a>
+					<a class='' href='p_delete.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Delete</button></a>
+					<a class='' href='p_show_media.php?id=" .$row['media_lib_ID']."'><button class='home-manipulate-button' type='button'>Details</button></a>
 				</td>
 				</tr>" ;
 			}
