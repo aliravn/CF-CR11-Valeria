@@ -13,7 +13,7 @@ body {
 table {
 	width: 100%;
 	margin-top: 20px;
-	font-size: 0.7rem; /* can be changed, font-color not possible to change */
+	font-size: 0.9rem; /* can be changed, font-color not possible to change */
 	background-color: white;
 }	
 
@@ -50,7 +50,7 @@ table {
 }
 
 .confirmation-message {
-	width: 30rem;
+	width: 40rem;
 	height: 100px;
 	margin: 0 auto;
 	margin-top: 10vw;
@@ -68,7 +68,7 @@ table {
 	padding: .4rem 1rem;
 	margin: 0 1rem;
 	font-size: 1.5rem;
-	border-radius: 15px 150px 15px 150px;
+	border-radius: 150px 15px 150px 15px;
 	box-shadow: 5px 5px 5px grey;
 	cursor: pointer;
 }
@@ -126,3 +126,6 @@ header > img {
 	object-fit: cover;
 }
 
+.publisher-page-button > button {
+	margin-top: 2rem;
+}
