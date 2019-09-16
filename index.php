@@ -8,7 +8,8 @@
 	<title>Intergalactic Library - Home</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-<!-- 	<script src="jquery-3.4.1.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,12 +22,21 @@
 	</header>
 
 <!-- 	<div id="add-item-form-container">
-	</div>
+		some example text
+	</div> -->
 
-	<script>
-		
+	<a href="p_create.php">
+		<button class="btn btn-success" id="add-item-button" type="button">Add new media</button>
+	</a>
+
+<!-- 	<script>
+		$("#add-item-form-container").hide();
+		$("#add-item-button").click(function(e){
+			e.preventDefault();
+			$("#add-item-form-container").show();
+			$("#add-item-button").hide();
+		})
 	</script> -->
-	<a href="p_create.php"><button class="btn btn-success" type="button">Add new media</button></a>
 
 	<table  border="1" cellspacing= "0" cellpadding="0" class="table">
 		<thead>

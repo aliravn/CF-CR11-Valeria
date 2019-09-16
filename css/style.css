@@ -17,6 +17,10 @@ table {
 	background-color: white;
 }	
 
+/* #add-item-form-container {
+	display: none;
+} */
+
 .img-size {
 	width: 100px;
 }
