@@ -103,18 +103,18 @@ if ($_GET['id']) {
 					var_dump($data['media_type']);
 					if ($data['media_type']=="book") {
 						echo "
-						<option value='DVD'>DVD</option>
-						<option value='CD'>CD</option>
+						<option value='dvd'>DVD</option>
+						<option value='cd'>CD</option>
 						";
 					} else if ($data['media_type']=='cd') {
 						echo "
-						<option value='BOOK'>BOOK</option>
-						<option value='DVD'>DVD</option>
+						<option value='book'>BOOK</option>
+						<option value='dvd'>DVD</option>
 						";
 					} else {
 						echo "
-						<option value='BOOK'>BOOK</option>
-						<option value='CD'>CD</option>
+						<option value='book'>BOOK</option>
+						<option value='cd'>CD</option>
 						";	
 					}
 					?>					
