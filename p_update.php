@@ -42,7 +42,6 @@ if ($_GET['id']) {
 	<link rel="stylesheet" type="text/css" href="css/style.css">   
 </head>
 
-
 <body>
 	<div class="update-page">
 		<h3><?php echo $data['title'];?></h3>
@@ -133,7 +132,6 @@ if ($_GET['id']) {
 					?>
 				</select>
 			</div>
-
 			<div class="update-button-container">
 				<a href= "index.php"><button class = "back-button" type="button">Back</button></a>		
 				<button  type= "submit">Save changes</button>
@@ -146,4 +144,3 @@ if ($_GET['id']) {
 <?php
 }
 ?>
-

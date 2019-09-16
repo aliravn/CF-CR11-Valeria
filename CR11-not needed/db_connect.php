@@ -10,7 +10,7 @@ define ('DBNAME', 'cr11_valeria_nazarova_biglibrary');
 $connect = mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME);
 
 if (!$connect) {
-	die("Connection failed : ". mysqli_error());
+ die("Connection failed : ". mysqli_error());
 }
 // else {echo "connected";}
 ?>

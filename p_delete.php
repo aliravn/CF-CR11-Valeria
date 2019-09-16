@@ -18,8 +18,8 @@ if ($_GET['id']) {
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Delete media</title>
-   <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Delete media</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
@@ -39,4 +39,3 @@ if ($_GET['id']) {
 <?php
 }
 ?>
-

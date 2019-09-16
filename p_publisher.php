@@ -21,8 +21,8 @@ if ($_GET['id']) {
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Media by Publisher</title>
-   <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Media by Publisher</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
