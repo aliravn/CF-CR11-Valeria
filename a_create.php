@@ -27,7 +27,7 @@ if ($_POST) {
 		echo "
 		<div class='confirmation-message'>
 			<p>Record has beed successfully added to the library</p>
-			<a href='create.php?id=$id'><button type='button'>Add more</button></a>
+			<a href='p_create.php?id=$id'><button type='button'>Add more</button></a>
 			<a href='index.php'><button type='button'>Go Home</button></a>
 		</div>
 		";
