@@ -51,11 +51,7 @@ $connect->close();
 				<span>Author</span>
 				<select class="form-control" name="fk_author">
 					<?php foreach($author_list as $author_ID=>$author_name) {
-						if($data['fk_author']==$author_ID) {
-							echo "<option value=$author_ID selected>$author_name (current value)</option>";
-						} else {
-							echo "<option value=$author_ID>$author_name</option>";
-						}
+                        echo "<option value=$author_ID>$author_name</option>";
 					}
 					?>
 				</select>
@@ -76,11 +72,7 @@ $connect->close();
 				<span>Publisher</span>
 				<select class="form-control" name="fk_publisher">
 					<?php foreach($publisher_list as $publisher_ID=>$publisher_name) {
-						if ($data['fk_publisher']==$publisher_ID) {
-							echo "<option value=$publisher_ID selected>$publisher_name (current value)</option>";
-						} else {
-							echo "<option value=$publisher_ID>$publisher_name</option>";
-						}	
+						echo "<option value=$publisher_ID>$publisher_name</option>";
 					}
 					?>
 				</select>
