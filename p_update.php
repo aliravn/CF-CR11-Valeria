@@ -99,7 +99,7 @@ if ($_GET['id']) {
 				<select class="form-control" name= "media_type">
 					<?php 
 					echo "<option value=".$data['media_type']." selected>".$data['media_type']." (current value)</option>";
-					var_dump($data['media_type']);
+					// var_dump($data['media_type']);
 					if ($data['media_type']=="book") {
 						echo "
 						<option value='dvd'>DVD</option>
