@@ -55,7 +55,6 @@ table {
 
 .confirmation-message {
 	width: 40rem;
-/* 	height: 100px; */
 	margin: 0 auto;
 	margin-top: 10vw;
 	font-size: 1.2rem;
@@ -80,7 +79,7 @@ table {
 .delete {
 	background-color: #f54251;
 	box-shadow: 10px 5px 5px red, -5px -5px 5px grey;
-	color: white;s
+	color: white;
 }
 
 .delete-page {
@@ -91,7 +90,6 @@ table {
 	font-size: 1.2rem;
 	text-align: center;
 	padding: 2rem 1rem 2.5rem;
-/* 	background-color: #f78b8e; */
 	border-radius: 20px;
 	border: .5rem solid #f78b8e;
 	box-shadow: 5px 5px 5px grey, -5px -5px 5px grey;
@@ -140,9 +138,7 @@ header > img {
 	margin: 0 auto;
 	margin-top: 5rem;
 	font-size: 1.2rem;
-/* 	text-align: center; */
 	padding: 1rem;
-/* 	background-color: #f78b8e; */
 	border-radius: 20px;
 	border: .5rem solid #4287f5;
 	box-shadow: 5px 5px 5px grey, -5px -5px 5px grey;
