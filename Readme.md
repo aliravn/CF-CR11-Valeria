@@ -1,12 +1,12 @@
 Project Structure:
 
 1) Database development and DB creation in mySQL
-Exported DB in SQL-file: cr11_valeria_nazarova_biglibrary.sql
+Exported DB in SQL-file: cr11_vn_lib.sql
 
 2) App structure:
-Flowchart of the app structure: app_structure.jpg
+Flowchart of the app structure in project_outline folder
 
-3) Connection mySQL with pHP and HTML
+3) Connection mySQL with PHP and HTML
 "action"-pages:
 db_connect.php
 a_create.php
